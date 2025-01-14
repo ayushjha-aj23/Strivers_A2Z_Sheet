@@ -48,7 +48,7 @@ class Solution {
     Node sortedMerge(Node head1, Node head2) {
     
         // Create a dummy node to help with merging
-        Node dummy = new Node(0);
+        Node dummy = new Node(-1);
         Node current = dummy;
         
         // Traverse both lists and merge them
