@@ -26,12 +26,12 @@ class Solution {
   }
   
   // 2. Insert before a given node
-  Node insertBeforeKey(Node head, int key, int newData) {
+  Node insertBeforeKey(Node head, int key, int x) {
         if (head == null) 
             return null;
         // Special case: if the key is at the head
         if (head.data == key) {
-            Node newNode = new Node(newData);
+            Node newNode = new Node(x);
             newNode.next = head;
             return newNode;
         }
@@ -55,7 +55,58 @@ class Solution {
         return head;
     }
 
-  // 3. 
+  // 3. Insert a new node after a given node
+  Node insertAfter(Node head, int key, int x) {
+        Node temp = head;
+
+        // Iterate over Linked List to find the key and when found break the loop
+        while (temp != null) {
+            if (temp.data == key)
+                break;
+            temp = temp.next;
+        }
+    
+        // if temp becomes null means, given key is not found in linked list
+        if (temp == null)
+            return head;
+        
+        // Create new node by given data and point the next of newNode to temp next & then point temp next to newNode
+        Node newNode = new Node(x);
+        newNode.next = temp.next;
+        temp.next = newNode;
+        return head;
+    }
+
+  // 4. Insert at the specified position
+  Node insertAtPosition(Node head, int position, int x){
+        if (position <= 0) return null; // Invalid position
+        
+        Node newNode = new Node(x);
+
+        // If inserting at the front (position 1)
+        if (position == 1) {
+            newNode.next = head;
+            head = newNode;
+            return head;
+        }
+
+        Node temp = head;
+        int count = 1;
+
+        // Traverse the list to find the node just before the position
+        while (temp != null && count < position - 1) {
+            temp = temp.next;
+            count++;
+        }
+
+        // If position is valid, insert the new node
+        if (temp != null) {
+            newNode.next = temp.next;
+            temp.next = newNode;
+        }
+
+        return head;
+  }
 
   // 5. Insert a node at the end of the linked list.
   Node insertAtEnd(Node head, int x) {
@@ -73,6 +124,14 @@ class Solution {
         return head;
     }
 
-
+static void printList(Node node) {
+        while (node != null) {
+            System.out.print(node.data + " ");
+            node = node.next;
+        }
+        System.out.println();
+}
+  
+  
 
 
