@@ -1,4 +1,8 @@
 // GFG
+// Input: Linked list: 17->15->8->9->2->4->6
+// Output: 8->2->4->6->17->15->9
+
+
 // User function Template for Java
 
 /*
