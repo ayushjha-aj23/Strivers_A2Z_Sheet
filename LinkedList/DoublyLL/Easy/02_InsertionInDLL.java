@@ -57,33 +57,30 @@ class Solution {
         newNode.prev = prevNode;
     }
 
-    // Insert at a specific position (1-based index)
-    public void insertAtPosition(int position, int data) {
-        if (position < 1) {
-            System.out.println("Position should be >= 1");
-            return;
+    // Function to insert a new node at given position in doubly linked list.
+    Node addNode(Node head, int p, int x) {
+        // Your code here
+        Node newNode = new Node(x);
+        
+        if(head == null){ // Empty DLL{
+            if(p==0) // Empty List and position is 0 
+                return newNode;
+            return head; // Empty List and positon is more than 0
         }
-        Node newNode = new Node(data);
-        if (position == 1) {
-            insertAtBeginning(position, data);
-            return;
+        Node temp = head;
+        int position = 0;
+        
+        while(temp != null && position < p){
+            temp = temp.next;
+            position++;
         }
-        Node current = head;
-        int count = 1;
-        while (current != null && count < position - 1) {
-            current = current.next;
-            count++;
-        }
-        if (current == null) {
-            System.out.println("Position is greater than the size of the list");
-            return;
-        }
-        newNode.next = current.next;
-        if (current.next != null) {
-            current.next.prev = newNode;
-        }
-        current.next = newNode;
-        newNode.prev = current;
+        newNode.next = temp.next; // NewNode ka Next to Temp ka Next se
+        newNode.prev = temp; // NewNode ka prev to Temp ke Prev se
+        if(temp.next!= null)
+            temp.next.prev = newNode; // If current.next is not null, update prev of next node
+        
+        temp.next = newNode; // Temp ka next to NewNode as it is after
+        return head;
     }
 
     // Print the list
