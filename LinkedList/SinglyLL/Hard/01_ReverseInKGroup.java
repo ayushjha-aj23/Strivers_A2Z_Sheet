@@ -22,8 +22,12 @@
 
 // Repeat the process 
 
+// For Case 1
 // And once we are left with less than K elements then just simply link the prevNode to the head of the left-out-node's head
+// For Case 2 just reverse the left over nodes
 
+
+// ---------------------------------------------Case 1: Link Left Overs when nodes are less then K Nodes --------------
 
 class Solution {
     public ListNode reverseKGroup(ListNode head, int k) {
@@ -94,3 +98,20 @@ class Solution {
     return prev;  // After the loop, prev will be the new head of the reversed list
     }
 }
+
+// ---------------------------------------------Case 2: Reverse the Left Overs when nodes are less then K Nodes --------------
+// Just the small change when checking the codition if(KthNode==null) or not 
+
+// If KthNode is null i.e. Either we are left with less than K Nodes 
+// ---> Reverse the left over nodes and join with prevNode.next
+// Or From Beginning there were less than K Nodes
+// ---> Reverse the nodes and just break the loop
+// In both the cases we have to do the reversal so do the reversal first and then check the condition 
+    // if(KthNode==null){
+                
+    //     Node LeftOverHead = reverseList(temp); // Reverse the left-overs
+    //     if(prevNode!=null){
+    //         prevNode.next = LeftOverHead;
+    //     }
+    //     break;
+    // }
