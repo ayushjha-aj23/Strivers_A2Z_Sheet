@@ -41,7 +41,8 @@ class Solution {
         }
 
         // Position of New Tail 
-        int newTailPos = lengthOfLL-k;
+        int newTailPos = lengthOfLL-k; // For Right Rotations
+        // if Left Rotations then ---> int newTailPos = k; 
 
         // System.out.println("Position of New Tail is - "+newTailPos);
 
