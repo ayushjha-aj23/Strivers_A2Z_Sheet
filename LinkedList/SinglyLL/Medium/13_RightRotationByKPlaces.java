@@ -1,4 +1,4 @@
-// *************************Right Rotation*************************
+// *************************Right Rotation and Left Rotation with Just a Small Change*************************
 // LC
 
 /**
