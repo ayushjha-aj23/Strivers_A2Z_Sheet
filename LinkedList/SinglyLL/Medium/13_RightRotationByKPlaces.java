@@ -34,6 +34,12 @@ class Solution {
         // If k is greater than length of LL then use modulus
         k = k%lengthOfLL;
 
+        // If no rotation is needed, return the head
+        if (k == 0) {
+            temp.next = null; // Break the circular connection
+            return head;
+        }
+
         // Position of New Tail 
         int newTailPos = lengthOfLL-k;
 
@@ -46,7 +52,10 @@ class Solution {
             newTail = newTail.next;
             counter++;
         }
+
+
         // System.out.println("Value in temp right now"+newTail.val);
+
         ListNode newHead = newTail.next; // Store the newHead 
         newTail.next = null; // As temp is now new tail so make it to null
         return newHead;
