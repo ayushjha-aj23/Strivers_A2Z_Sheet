@@ -10,7 +10,8 @@ class MyQueue {
 		front=-1;
 		rear=-1;
 	}
-	
+
+	// TC of all is -> O(1) and SC of all is -> O(1) but we are using space equal to size of array as static
 	//Function to push an element x in a queue.
 	void push(int x)
 	{
