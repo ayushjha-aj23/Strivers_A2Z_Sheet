@@ -6,6 +6,8 @@ class MyQueue {
         A = new Stack<>();
         B = new Stack<>();
     }
+
+    // Approach 1 - If push operations are less as compared to pop and top operations
     
     // A-->B - A vale stack ke sare B mae
     // x-->A - new elements A mae store karo
@@ -33,6 +35,35 @@ class MyQueue {
     
     public boolean empty() {
         return A.isEmpty();
+    }
+
+    // Approach 2 - If more push operations than top and pop then use this approach
+    public void push(int x) {
+        A.push(x);
+    }
+
+    public int pop(){
+        if(!B.isEmpty())
+            return B.pop();
+        else{
+            while(A.size()>0){
+                B.push(A.pop());
+            }
+            return B.pop();
+        }
+    }
+
+    public int peek() {
+        if(!B.isEmpty())
+            return B.peek();
+        else{
+            while(A.size()>0)
+                B.push(A.pop());
+            return B.peek();
+        }
+    }
+    public boolean empty() {
+        return A.isEmpty() && B.isEmpty();
     }
 }
 
