@@ -4,7 +4,8 @@ class Queues
     Queue<Integer> q2 = new LinkedList<Integer>();
     
     //Function to push an element into stack using two queues.
-    
+    // TC - O(N) 
+	
     // Step1: Enqueue x to q2.
     // Step2: One by one dequeue everything from q1 and enqueue to q2.
     // Step3: Swap the queues of q1 and q2.
@@ -24,6 +25,7 @@ class Queues
     }
     
     //Function to pop an element from stack using two queues. 
+    // TC - O(1)
     // Dequeue the element from Q1 and return it
     int pop()
     {
