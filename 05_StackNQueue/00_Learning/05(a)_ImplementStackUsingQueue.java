@@ -31,7 +31,8 @@ class MyStack {
     public MyStack() {
        q = new LinkedList<>(); // Inbuilt Library Function
     }
-    
+
+    // TC - O(N)
     public void push(int x) {
         int size = q.size(); // Find the size of Queue before adding the element
         
@@ -43,15 +44,18 @@ class MyStack {
             // q.remove();
         }
     }
-    
+
+    // TC - O(1)
     public int pop() {
         return q.remove();
     }
-    
+
+     // TC - O(1)
     public int top() {
         return q.peek();
     }
-    
+
+     // TC - O(1)
     public boolean empty() {
         return q.isEmpty(); // Use isEmpty() to check if the queue is empty
     }
