@@ -1,7 +1,7 @@
 class Solution {
     
     // Step 1: Take Char stack, iterator(i) and result of type string
-    // Step 2: Iterate over the end of the string
+    // Step 2: Iterate till the end of the string
     // Step 3: If character is Operand ---> Simply add it to the result
     // Step 4: If character is '(' ---> Push into the Stack
     // Stap 5: If character is ')' ---> Add every operator from the stack to the result till it reaches '('
