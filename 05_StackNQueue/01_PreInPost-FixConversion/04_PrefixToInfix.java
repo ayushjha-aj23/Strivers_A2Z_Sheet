@@ -3,7 +3,7 @@
 class Solution {
     
     // Step1: Take a Stack of String type
-    // Step2: Iterate till the length of the String
+    // Step2: Iterate from the length-1 to 0
     // Step3: If character is operand ---> Convert it to String and Push it into the Stack
     // Step4: If character is operator ---> Take the last 2 elements of the Stack and insert operator between them as ---> last + operator + secondLast
     // Step5: Push the new String again back into the Stack 
