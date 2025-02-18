@@ -10,7 +10,10 @@ class Solution {
     // Step 7: b. If priority of current character is greater than top ---> Push it into the Stack
     // Step 8: After the while loop is over ---> Check and add all the remaining operators from the stack till its empty
     // Step 9: Return result
-    
+
+    // Hamesha zada priority vala upar aasakta hai kam priority vale ke but reverse is not possible
+    // Stack - +, *, (, ^ and current element is -> + then it can't be pushed ---- So pop
+    // Stack - +, * ----> Current is -> ^ then it can come over * --- So push
     
     // Function to convert an infix expression to a postfix expression.
     public static String infixToPostfix(String s) {
