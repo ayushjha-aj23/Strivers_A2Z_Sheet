@@ -38,11 +38,17 @@ class MyQueue {
     }
 
     // Approach 2 - If more push operations than top and pop then use this approach
+    /*
     public void push(int x) {
         A.push(x);
     }
 
     public int pop(){
+        // If both stacks are empty, return -1
+        if (A.isEmpty() && B.isEmpty()) {
+            return -1;
+        }
+    
         if(!B.isEmpty())
             return B.pop();
         else{
@@ -65,6 +71,7 @@ class MyQueue {
     public boolean empty() {
         return A.isEmpty() && B.isEmpty();
     }
+    */
 }
 
 /**
