@@ -16,7 +16,6 @@ class Solution {
             if(arr[i]>largest)
                 largest = arr[i];
         }
-        
         return largest;
     }
 }
