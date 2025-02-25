@@ -28,7 +28,14 @@ class Solution {
         return result;
     }
     */
-    
+
+    // Optimised Approach - O(N) 
+    // Step 1: Initialize the Result array
+    // Step 2: Use a Stack 
+    // Step 3: Iterate over the array 
+    //     a. Pop elements from the stack  
+    //     b. If stack is not empty - set peek as NGE
+    //     c. Always push a[i] in the stack
     
     
     // Function to find the next greater element for each element of the array.
