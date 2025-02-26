@@ -2,7 +2,6 @@
 
 class Solution {
     
-    
     // Step1: Take a Stack of String type
     // Step2: Reverse the String and then Iterate till the length of the String
     // Step3: If character is operand ---> Convert it to String and Push it into the Stack
@@ -30,6 +29,7 @@ class Solution {
                 st.push(newString);
             }
         }
+        
         return st.pop();
     }
 }
