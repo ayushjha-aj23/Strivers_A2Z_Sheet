@@ -17,7 +17,6 @@ class Solution {
         int index = indices[i];
         int count = 0;
         
-        
         for(int j=index+1; j<arr.length; j++){
             int value = arr[index];
             if(value<arr[j])
