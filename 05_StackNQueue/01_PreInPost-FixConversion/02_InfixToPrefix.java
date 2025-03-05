@@ -21,7 +21,7 @@
         String postfix = convertInfixToPostfix(infix);
         return new StringBuilder(postfix).reverse().toString();
     }
-    
+
     // Convert infix expression to postfix notation
     static String convertInfixToPostfix(String s) {
         
@@ -57,8 +57,7 @@
         
         return result;
     }
-    
-    
+
     // Priority of operators
     static int priority(char c){
         if(c=='^')
