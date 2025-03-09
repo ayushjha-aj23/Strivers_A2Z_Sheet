@@ -13,7 +13,7 @@ class Solution {
     }
     */
     
-    
+
     // Optimised Approach - 
     static boolean isPrime(int n) {
         // code here
