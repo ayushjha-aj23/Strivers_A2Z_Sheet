@@ -11,7 +11,7 @@ class Solution {
             return;
         // Print Statement
         System.out.print(N + " ");
-        // Condition Check
+        // Call Itself
         printNto1(N-1);
     }
 }
