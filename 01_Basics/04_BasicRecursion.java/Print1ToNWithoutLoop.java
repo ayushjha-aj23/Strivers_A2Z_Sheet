@@ -10,10 +10,8 @@ class Solution {
         // Base Condition
         if(N==0)
             return;
-        
         // Call Itself
         printN(N-1);
-        
         // Print Statement
         System.out.print(N + " ");
     }
