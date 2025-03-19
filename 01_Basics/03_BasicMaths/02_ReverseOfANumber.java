@@ -32,7 +32,6 @@ class Solution {
         // If number was negavtive add - sign to it
         // if(isNegative){result *= -1;}
         // OR
-        
         return isNegative==true? result*-1: result;
     }
 }
