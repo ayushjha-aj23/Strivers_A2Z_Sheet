@@ -3,7 +3,7 @@
 class Solution {
     
     // Naive Approach - 
-    // GCF(HCF) using Euclidean Algorithm(Euclid Method)
+    // GCD(HCF) using Euclidean Algorithm(Euclid Method)
     // LCM - find max and then smallest value then can divide both the nums 
     /*
     public static int[] lcmAndGcd(int a, int b) {
