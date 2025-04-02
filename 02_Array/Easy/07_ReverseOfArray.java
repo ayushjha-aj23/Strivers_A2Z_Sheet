@@ -1,6 +1,5 @@
 class Solution {
-    
-    // For In-place Reversal 
+
     // Method 1: Naive Approach - Use temporary array 
     // Method 2: Using Stack 
     // public void reverseArray(int arr[]) {
@@ -17,7 +16,8 @@ class Solution {
     //     }
     // }
         
-    Method 3: Use Two Pointer Approach  
+    // Method 3: Use Two Pointer Approach -> In-place
+    // It can also be done using recursion as well - by recursively calling a function which replaces first and last element
     public void reverseArray(int arr[]) {    
         int left = 0;
         int right = arr.length-1;
@@ -31,4 +31,5 @@ class Solution {
             right--;
         }
     }
+    
 }
