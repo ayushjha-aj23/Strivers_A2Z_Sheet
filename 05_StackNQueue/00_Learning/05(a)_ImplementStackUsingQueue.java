@@ -1,4 +1,4 @@
-    // We have to make the Queue behave in such a way that Queue behaves as a Stack 
+    // We have to make the Queue behave in such a way that it behaves as a Stack 
     // As Top must always give the Last Stored Element as LIFO for Stack 
 
 
@@ -10,7 +10,7 @@
     // Step2b:[9, 4] -> Now top is 9 - CORRECT
     
     // Step3: [9, 4, 2] -> Top is 9 but it must be 2 so place all the other after 2
-    // Step3b:[4, 2, 9] ----> [2, 9, 4] ---> Now the top is 4 - CORRECT
+    // Step3b:[4, 2, 9] ----> [2, 9, 4] ---> Now the top is 2 - CORRECT
 
     // Step4: [2, 9, 4, 5] ---> Top is 2 but it must be 5 so again do the same
     // [9, 4, 5, 2]->[4, 5, 2, 9]->[5, 2, 9, 4]-> Now top is 5 - CORRECT
@@ -19,7 +19,7 @@
     // Step6: Pop - 5 --- [2, 9, 4]
     // Step7: Pop - 2 --- [9, 4]
     // Step8: Top - 9
-    // Step9: Push(1) --- [9, 4, 1] -Top is 1 but it is not correct so again do same
+    // Step9: Push(1) --- [9, 4, 1] -Top is 9 but it is not correct so again do same
     // [4, 1, 9]-[1, 9, 4] - Now top is 1 - CORRECT
 
     // Step10: Top - 1
