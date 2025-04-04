@@ -25,7 +25,7 @@ class MyStack {
     public int pop() {
         // Your Code
         
-        // Check Overflow Error
+        // Check Underflow Error
         if(top==-1) return -1; // or we can say if(top<0) 
         // System.out.println("Stack Underflow"); 
         
@@ -36,7 +36,7 @@ class MyStack {
     } // Generally pop function pops the element out from the stack without printing it in that case we will not return anything
 
   public int top(){
-        // Check Overflow Error
+        // Check Underflow Error
         if(top==-1) return -1; // or we can say if(top<0) 
         // System.out.println("Stack Underflow"); 
     return arr[top];
