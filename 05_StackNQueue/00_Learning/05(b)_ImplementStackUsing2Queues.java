@@ -36,4 +36,12 @@ class Queues
             
         return q1.remove();
     }
+
+    public int top() {
+        return q1.peek();
+    }
+    
+    public boolean empty() {
+        return q1.isEmpty();
+    }
 }
