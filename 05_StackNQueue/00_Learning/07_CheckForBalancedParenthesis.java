@@ -6,8 +6,8 @@ class Solution {
     // Step 3: Iterate through the string: For each character in the string:
     //  a. If it’s an opening bracket ((, {, [), push it onto the stack.
     //  b. If it’s a closing bracket (), }, ]):
-    //  c. Check if the stack is empty. If it is, return false (because there’s no opening bracket).
-    //  d. If the stack is not empty, pop the top of the stack and check if it matches the current closing bracket using the mapping.
+    //     - Check if the stack is empty. If it is, return false (because there’s no opening bracket).
+    //     - If the stack is not empty, pop the top of the stack and check if it matches the current closing bracket using the mapping.
     //  Step 4: Final check: After processing all characters, if the stack is empty, return true (all brackets matched), otherwise return false.
 
 // TC-O(N) and SC-O(N)
