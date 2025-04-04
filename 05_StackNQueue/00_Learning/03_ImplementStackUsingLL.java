@@ -22,8 +22,8 @@ class MyStack {
         // We will not check overflow here becuase here stack is dynamic in nature
         
         StackNode newNode = new StackNode(a); // Create new Node
-        newNode.next = top; // NewNode pointing to top
-        top = newNode; // Update top as newNode
+        newNode.next = top; // NewNode pointing to top ---> For Stack-New Over the old Stack Node
+        top = newNode; // Update top as newNode ---> To point to current node i.e. Top
         size++; // Increase the size
     }
 
@@ -36,7 +36,7 @@ class MyStack {
         
         StackNode temp = top; // Store top in temp 
         // and move top to next and temp will automatically be discarded by Garbage Collector 
-        top = top.next; // Move top to point to next node
+        top = top.next; // Move top to point to next node here next node means the node below the current node
         size--; // Decrease the size
         
         return temp.data; // Return the data of poped element
