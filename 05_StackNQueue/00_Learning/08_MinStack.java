@@ -44,7 +44,7 @@ class MinStack {
     }
     
     public void push(int v) {
-        Long val = Long.valueOf(v); // Type casting value of from int to Long
+        long val = Long.valueOf(v); // Type casting value of from int to long
         if(st.isEmpty()){
             minElement = val;
             st.push(val);
