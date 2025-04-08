@@ -1,4 +1,9 @@
 class Solution {
+
+    // NEXT GREATER ELEMENT
+    // Next Greater Element(NGE) of some element x in an array is the first greater element that is to the right of x 
+    // in the same array and if not then defualt we can take as -1
+    // E.g. - Input - [2,3,6,4], Output - [3, 6, -1, -1]
     
     // Approach1: Nested For Loop - TC-O(N2)
     /*
