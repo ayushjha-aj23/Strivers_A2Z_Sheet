@@ -9,16 +9,17 @@ class Solution {
         Stack<Integer> st = new Stack<>();
         int n2 = nums2.length;
 
+        // Step1: Iterate from the back
         for(int i=n2-1; i>=0; i--){
 
-            // If top is less than current
+            //a. If top<current --- Pop the top of stack as it can't be NGE
             while(!st.isEmpty() && (st.peek()<= nums2[i]))
                 st.pop();
             
-            // If top is greater than current then set it as NGE
+            //b. If top>current --- Set it as NGE otherwise set -1 
             nextGreaterMap.put(nums2[i], st.isEmpty()? -1 : st.peek());
             
-            // Always push the element to the stack
+            //c. Always push the element to the stack
             st.push(nums2[i]);
         }
 
