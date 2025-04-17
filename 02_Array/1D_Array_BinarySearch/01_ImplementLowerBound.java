@@ -10,10 +10,10 @@ class Solution {
             
             int mid = left + (right-left)/2;
             if(arr[mid]>=target){
-                result = mid;
-                right = mid-1; // Move the right pointer to mid - 1
+                result = mid; // Add the Lower Bound to the result 
+                right = mid-1; // Then move the right pointer to mid - 1
             }
-            else if(arr[mid]<target) // We can use only else also
+            else
                 left = mid+1; // Move the left pointer to mid + 1
         }
         
