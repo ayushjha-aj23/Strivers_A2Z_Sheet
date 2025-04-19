@@ -43,6 +43,9 @@ class MyQueue {
 	    //System.out.println("Queue is Underflow");
 		
 	    if(currentSize==0) return -1; // Underflow
+
+	    // Store the value of the front in element
+	    int element = arr[front]; // LIFO so element to be removed is from front
 		
 	   	if(currentSize==1){ // Means we are destroying the queue by removing this element
 	   	    front = rear = -1;
@@ -50,7 +53,6 @@ class MyQueue {
 	   	    front = (front+1)%size;
 	   	}
 		
-		int element = arr[front]; // LIFO so element to be removed is from front
 	   	currentSize--; // Decrease the currentSize
 	   	return element; // Return the element
 	} 
