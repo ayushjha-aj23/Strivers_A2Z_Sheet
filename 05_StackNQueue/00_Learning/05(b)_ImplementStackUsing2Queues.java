@@ -17,10 +17,11 @@ class Queues
 	    while(!q1.isEmpty()){
 	        q2.add(q1.remove());
 	    }
-	    
-	    Queue<Integer> q = q1;
+
+	    // Swap Q1 and Q2 every time
+	    Queue<Integer> qTemp = q1;
 	    q1 = q2;
-	    q2 = q;
+	    q2 = qTemp;
 	    
     }
     
