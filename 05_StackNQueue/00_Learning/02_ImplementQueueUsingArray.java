@@ -56,7 +56,7 @@ class MyQueue {
 	} 
 
   int frontPointer(){
-    if(currentSize==0)
+    // if(currentSize==0)
        //System.out.println("Queue is Underflow");
     return arr[front];
   }
