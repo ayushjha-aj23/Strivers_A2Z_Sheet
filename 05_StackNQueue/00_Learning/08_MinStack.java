@@ -50,10 +50,10 @@ class MinStack {
             minElement = val;
             st.push(val);
         }else{
-            if(val<minElement){ // If new Value to be pushed is smaller than minElement
+            if(val<minElement){ // If new Value to be pushed is smaller than minElement - MODIFY 
                 st.push(2*val-minElement); // Push 2*Val-minElement in Stack
                 minElement = val; // Update minElement by new Value
-            }else{ // If new Value to be pushed is greater than currect minElement
+            }else{ // If new Value to be pushed is greater than currect minElement - NO MODIFY
                 st.push(val);
             }
         }
@@ -67,7 +67,7 @@ class MinStack {
 
         // If temp is smaller then minElement then we have to modify minElement too
         if(temp<minElement){
-            minElement = 2*minElement-temp;
+            minElement = 2*minElement-temp; // MODIFY MinElement
         }
     }
     
