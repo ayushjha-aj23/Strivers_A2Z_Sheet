@@ -1,4 +1,5 @@
-// Approach 1 - Using Pair to store inside a stack
+// Approach 1 - Using Pair to store inside a stack 
+// TC - O(1) and SC - O(2N) as it is a pair
 /*
 class MinStack {
 
