@@ -37,7 +37,7 @@ class Solution {
                 st.pop();
                 // st.pop() outside the while loop is necessary to remove the opening parenthesis '(' from the stack.
             }else{
-                while(!st.isEmpty() && priority(c) <= priority(st.peek()) ){
+                while(!st.isEmpty() && (priority(c) <= priority(st.peek())) ){
                     result += st.pop();
                 }
                 st.push(c);
