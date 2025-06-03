@@ -7,6 +7,7 @@
 */
 
 // Space, Star, Space
+// 4->0, 1->9, 4->0 (Decrease, Increase, Decrease)
 
 public class Main
 {
