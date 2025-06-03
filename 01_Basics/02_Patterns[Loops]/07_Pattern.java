@@ -36,5 +36,5 @@ public class Main
             spaces_b--;
             System.out.println();
         }
-	}
+}
 }
