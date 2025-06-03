@@ -21,7 +21,7 @@ public class Main
 	    
         for(int i=0; i<5; i++){
             // Space
-            for(int j=0; j<=spaces_a; j++){
+            for(int j=0; j<spaces_a; j++){
                 System.out.print("a");
             }
             spaces_a++;
@@ -33,7 +33,7 @@ public class Main
             stars-=2;
                 
             // Spaces 
-            for(int j=0; j<=spaces_b; j++){
+            for(int j=0; j<spaces_b; j++){
                 System.out.print("b");
             }
             spaces_b++;
