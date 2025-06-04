@@ -1,4 +1,6 @@
 /*
+Pattern - 7: Star Pyramid
+
     *
    ***
   *****
@@ -12,13 +14,13 @@
 public class Main
 {
 	public static void main(String[] args) {
-	    
-	    int spaces_a= 4;
-	    int spaces_b= 4;
+	int n=5;  
+	    int spaces_a= n-1;
+	    int spaces_b= n-1;
 	    int stars = 1;
 	    
-        for(int i=0; i<5; i++){
-            // Space
+        for(int i=0; i<n; i++){
+            // Spaces
             for(int j=1; j<=spaces_a; j++){
                 System.out.print("a");
             }
