@@ -1,4 +1,6 @@
 /*
+Pattern-1: Rectangular Star Pattern
+
 *****
 *****
 *****
