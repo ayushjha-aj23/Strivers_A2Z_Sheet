@@ -1,6 +1,7 @@
 
-
 /*
+Pattern - 8: Inverted Star Pyramid
+
 *********
  *******
   *****
@@ -14,12 +15,12 @@
 public class Main
 {
 	public static void main(String[] args) {
-	    
+	    int n=5;
 	    int spaces_a= 0;
 	    int spaces_b= 0;
-	    int stars = 9;
+	    int stars = 2*n-1;
 	    
-        for(int i=0; i<5; i++){
+        for(int i=0; i<n; i++){
             // Space
             for(int j=0; j<spaces_a; j++){
                 System.out.print("a");
@@ -27,7 +28,7 @@ public class Main
             spaces_a++;
                 
             // Star
-            for(int j=1; j<=stars;j++){
+            for(int j=0; j<stars;j++){
                 System.out.print("*");
             }
             stars-=2;
