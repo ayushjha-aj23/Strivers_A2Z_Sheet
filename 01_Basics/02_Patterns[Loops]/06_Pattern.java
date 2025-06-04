@@ -1,5 +1,7 @@
 
 /*
+Pattern - 6: Inverted Numbered Right Pyramid
+
 12345
 1234
 123
@@ -11,7 +13,8 @@
 public class Main
 {
 	public static void main(String[] args) {
-        for(int i=5; i>=1; i--){
+	int n=5;
+        for(int i=n; i>=1; i--){
             for(int j=1; j<=i; j++){
                 System.out.print(j);
             }
