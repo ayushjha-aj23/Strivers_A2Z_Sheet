@@ -1,6 +1,6 @@
 
 /*
-Number Crown Pattern
+Pattern - 12: Number Crown Pattern
 
 1      1
 12    21
@@ -8,14 +8,10 @@ Number Crown Pattern
 12344321
 */
 
-
-
-
 public class Main
 {
-  
   // Number, Space, Number
-	public static void main(String[] args) {
+  public static void main(String[] args) {
 		
 		int n = 5;
 		// Outer Loop 
