@@ -1,3 +1,16 @@
+
+/*
+Number Crown Pattern
+
+1      1
+12    21
+123  321
+12344321
+*/
+
+
+
+
 public class Main
 {
   
