@@ -1,6 +1,7 @@
 
-
 /*
+Pattern - 11: Binary Number Triangle Pattern
+
 1
 01
 101
@@ -12,19 +13,20 @@
 public class Main
 {
 	public static void main(String[] args) {
+	    int n=5;
 	    int value = 1;
-    for (int i=0; i<5; i++) {
-        if(i%2==0)
-            value = 1;
-        else
-            value = 0;
-        
-        for(int j=0; j<=i; j++){
-            System.out.print(value);
-            value = 1-value; // Flip between 0 and 1
-        }
-        System.out.println();
-    }
+	    for (int i=0; i<n; i++) {
+	        if(i%2==0)
+	            value = 1;
+	        else
+	            value = 0;
+	        
+	        for(int j=0; j<=i; j++){
+	            System.out.print(value);
+	            value = 1-value; // Flip between 0 and 1
+	        }
+	        System.out.println();
+	    }
 
 	}
 }
