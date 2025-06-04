@@ -1,7 +1,7 @@
 
-
-
 /*
+Pattern - 9: Diamond Star Pattern
+
 aaaa*bbbb
 aaa***bbb
 aa*****bb
@@ -22,12 +22,13 @@ public class Main
 	}
 	
 	public static void printPattern_A(){
-	     int spaces_a= 4;
-	    int spaces_b= 4;
+	    int n=5;  
+	    int spaces_a= n-1;
+	    int spaces_b= n-1;
 	    int stars = 1;
 	    
-        for(int i=0; i<5; i++){
-            // Space
+        for(int i=0; i<n; i++){
+            // Spaces
             for(int j=1; j<=spaces_a; j++){
                 System.out.print("a");
             }
@@ -49,20 +50,20 @@ public class Main
 	}
 	
 	public static void printPattern_B(){
-	    int spaces_a= 0;
+	    int n=5;
+	    int spaces_a= 0; 
 	    int spaces_b= 0;
-	    int stars = 9;
+	    int stars = 2*n-1;
 	    
-        for(int i=0; i<5; i++){
+        for(int i=0; i<n; i++){
             // Space
             for(int j=0; j<spaces_a; j++){
                 System.out.print("a");
             }
             spaces_a++;
-            
                 
             // Star
-            for(int j=1; j<=stars;j++){
+            for(int j=0; j<stars;j++){
                 System.out.print("*");
             }
             stars-=2;
