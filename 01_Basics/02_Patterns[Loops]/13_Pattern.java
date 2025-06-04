@@ -16,8 +16,6 @@ Pattern - 13: Increasing Number Triangle Pattern
 public class Main
 {
 	public static void main(String[] args) {
-// 		System.out.println("Hello World");
-
         int n=5;
         int counter = 1;
         for(int i=1; i<=n; i++){
