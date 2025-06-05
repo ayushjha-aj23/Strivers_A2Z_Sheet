@@ -1,6 +1,7 @@
 
-
 /*
+Pattern - 16: Alpha-Ramp Pattern
+
 A
 BB
 CCC
