@@ -1,5 +1,6 @@
 
 /*
+Pattern-18: Alpha-Triangle Pattern
 E
 DE
 CDE
