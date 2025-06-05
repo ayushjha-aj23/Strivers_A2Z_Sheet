@@ -1,5 +1,7 @@
 
 /*
+Pattern - 21: Hollow Rectangle Pattern
+
 *****
 *   *
 *   *
