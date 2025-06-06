@@ -7,8 +7,6 @@ Pattern - 22: The Number Pattern
 3 2 1 2 3 
 3 2 2 2 3
 3 3 3 3 3
-
-
 */
 
 
@@ -27,7 +25,6 @@ public class Main
 	            
 	            System.out.print(n-Math.min(Math.min(top, bottom), Math.min(right, left)));
 	        } 
-	        
 	        System.out.println();
 	    }
 	}
