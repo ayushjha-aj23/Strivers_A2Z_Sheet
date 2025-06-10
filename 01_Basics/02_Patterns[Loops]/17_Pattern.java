@@ -7,6 +7,8 @@ Pattern - 17: Alpha-Hill Pattern
  ABCBA
 ABCDCBA
 
+n=4
+
 Space, Character, Space
 */
 
