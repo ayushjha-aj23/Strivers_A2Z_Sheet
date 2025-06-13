@@ -1,3 +1,4 @@
+// GFG - Decision Making In Java
 //User function Template for Java
 class Solution {
     public static String compareNM(int n, int m) {
