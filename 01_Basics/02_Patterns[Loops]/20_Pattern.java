@@ -1,5 +1,6 @@
 
 /*
+Pattern 20 - Buttterfly Pattern
 *        *
 **      **
 ***    ***
