@@ -1,3 +1,4 @@
+// GFG - Java Switch Case statement
 // User function Template for Java
 
 class Solution{
