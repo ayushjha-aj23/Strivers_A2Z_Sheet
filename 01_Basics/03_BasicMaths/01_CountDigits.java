@@ -1,5 +1,19 @@
-// GFG
+// GFG- Count Digits
+class Solution {
+    public int countDigits(int n) {
+        // code here
+        int temp = n;
+        int totalDigits = 0;
+        
+        while(temp!=0){
+            totalDigits++;
+            temp = temp/10;
+        }
+        return totalDigits;
+    }
+}
 
+// GFG - Count Digits - 2
 // User function Template for Java
 class Solution {
     static int evenlyDivides(int n) {
