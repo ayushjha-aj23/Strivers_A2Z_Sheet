@@ -4,7 +4,8 @@ class Solution {
     
     // Naive Approach - 
     // GCD(HCF) using Euclidean Algorithm(Euclid Method)
-    // LCM - find max and then smallest value that can divide both the nums 
+    // LCM - a. find max 
+    //       b. then find smallest value that can divide both the nums means modulus is 0
     /*
     public static int[] lcmAndGcd(int a, int b) {
         // code here
