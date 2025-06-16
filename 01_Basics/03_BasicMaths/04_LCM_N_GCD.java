@@ -1,3 +1,4 @@
+// GFG - LCM And GCD
 // User function Template for Java
 
 class Solution {
@@ -69,3 +70,6 @@ class Solution {
         return result;
     }
 }
+
+// Similar Question
+// LC - 1979. Find Greatest Common Divisor of Array
