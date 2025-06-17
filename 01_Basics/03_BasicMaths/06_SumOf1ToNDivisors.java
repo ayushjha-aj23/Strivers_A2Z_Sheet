@@ -1,4 +1,6 @@
 // Before this Problem let us first find out all the Divisors a Number (N)
+// GFG - Print All Divisors - All divisors of a Number
+
 // Approach-1: For Loop - TC-O(N)
 /*
 public static void print_divisors(int N) {
@@ -52,10 +54,7 @@ public static void print_divisors(int N) {
 */
 
 
-
-
-
-
+// Sum 1 to n Divisors
 // User function Template for Java
 class Solution {
     
