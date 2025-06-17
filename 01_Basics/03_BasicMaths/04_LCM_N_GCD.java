@@ -5,6 +5,11 @@ class Solution {
     
     // Naive Approach - 
     // GCD(HCF) using Euclidean Algorithm(Euclid Method)
+    // GCD(a,b) -> GCD(a-b, b) where a>b eveytime gets smaller
+    // E.g. GCD(20,15) -> GCD(5, 15) -> GCD(15,5) -> GCD(10,5) -> GCD(5, 0) -> As 1 of them is 0 so the other one is GCD 
+    // So, 5 is GCD of 20, 15
+    // Its better to modify formula as to reduce the number of steps -> GCD(a,b) -> GCD(a%b, b) where a>b 
+    
     // LCM - a. find max 
     //       b. then find smallest value that can divide both the nums means modulus is 0
     /*
@@ -73,3 +78,38 @@ class Solution {
 
 // Similar Question
 // LC - 1979. Find Greatest Common Divisor of Array
+
+/*
+class Solution {
+    public int findGCD(int[] nums) {
+
+       int min = Integer.MAX_VALUE;
+       int max = Integer.MIN_VALUE;
+
+       for(int i: nums){
+        if(i<min)
+            min = i;
+        
+        if(i>max)
+            max = i;
+       }
+        // System.out.println(min + " " + max);
+        int result = getGCD(min, max);
+       return result;
+    }
+
+    public int getGCD(int a, int b){
+        int a_GCD = a;
+        int b_GCD = b;
+        int temp;
+
+        while(b_GCD!=0){
+            temp = b_GCD;
+            b_GCD = a_GCD%b_GCD;
+            a_GCD = temp;
+        }
+
+        return a_GCD;
+    }
+}
+*/
