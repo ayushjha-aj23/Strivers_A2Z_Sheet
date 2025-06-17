@@ -25,7 +25,7 @@ class Solution {
             }
         }
         
-        // Step4: Convert int[] to String using StringBuilder and return it
+        // Step 4: Convert int[] to String using StringBuilder and return it
         StringBuilder sb = new StringBuilder();
         for(int i: result)
             sb.append(i);
