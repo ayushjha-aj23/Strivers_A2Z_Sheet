@@ -1,3 +1,61 @@
+// Before this Problem let us first find out all the Divisors a Number (N)
+// Approach-1: For Loop - TC-O(N)
+/*
+public static void print_divisors(int N) {
+        // code here
+        
+        for(int i=1; i<=N; i++){
+            if(N%i==0){
+                System.out.print(i + " ");
+            }
+        }
+    }
+*/
+
+// Approach-2 
+/*
+// Approach-2 -> N and N/i
+    // 1*36
+    // 2*18
+    // 3*12
+    // 4*9
+    // 6*6 
+    // .............
+    // 9*4
+    // 12*3
+    // 18*2
+    // 36*1
+    
+    // Output will be different -> 1 36 2 18 3 12 4 9 6
+    // So just to make sure it is in sorted order then -> Store and Sort
+    // But motive here is -> We can find the factors TC - sqrt(N)
+    
+    public static void print_divisors(int N) {
+        // code here
+        
+        List<Integer> list = new ArrayList<>();
+        
+        for(int i=1; i<=Math.sqrt(N); i++){
+            if(N%i==0){
+                list.add(i);
+                
+                if((N/i)!=i) // Just to make sure i is not printed twice (here 6)
+                    list.add(N/i);
+            }
+        }
+        
+        Collections.sort(list);
+        
+        for(int i: list)
+            System.out.print(i + " ");
+    }
+*/
+
+
+
+
+
+
 // User function Template for Java
 class Solution {
     
