@@ -1,3 +1,5 @@
+// Prime Number -> A number is called prime if it has exactly 2 divisors -> 1 and Number itself.
+
 class Solution {
     
     // Naive Approach - TC-O(N) and SC-O()
@@ -12,12 +14,31 @@ class Solution {
         return true;
     }
     */
+
+    // Better Approach 
+    // TC - O(sqrt(N))
+    static boolean isPrime(int n) {
+        // code here
+        int count = 0;
+        
+        for(int i=1; i*i<=n; i++){
+            if(n%i==0){
+                count++;
+                if((n/i)!=i)
+                    count++;
+            }
+        }
+        
+        if(count==2)
+            return true;
+        else
+            return false;
+    }
     
 
     // Optimised Approach - 
     static boolean isPrime(int n) {
         // code here
-        
         if(n<=1)
             return false;
         if(n==2) // Only Prime number which is even 
