@@ -12,6 +12,7 @@ class Solution {
               st.pop();
           }
 
+        
           // If stack is not empty - set a[i] as NGE
           // We have 2 ways to write - by if statement or by using ternary operator
           // Alternatively we can also initialize the result[] with -1 at the beginning
