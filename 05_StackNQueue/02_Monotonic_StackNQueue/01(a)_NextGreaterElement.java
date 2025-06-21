@@ -75,4 +75,30 @@ class Solution {
         }   
         return result;
     } 
+
+
+    // We can do 1 thing - Either Initialize the result with -1 or else inisde the for loop -> if stack is empty set -1
+    // Function to find the next greater element for each element of the array.
+    public ArrayList<Integer> nextLargerElement(int[] arr) {
+        // code here
+        Stack<Integer> st = new Stack<>();
+        int n = arr.length;
+        ArrayList<Integer> result = new ArrayList<>();
+
+         for(int i=0; i<n; i++){
+            result.add(-1);
+        }
+        
+        for(int i=n-1; i>=0; i--){
+            
+            while(!st.isEmpty() && (st.peek()<=arr[i])){
+                st.pop();
+            }
+
+            result.set(i, st.isEmpty()? -1: st.peek());
+    
+            st.push(arr[i]);
+        }   
+        return result;
+    } 
 }
