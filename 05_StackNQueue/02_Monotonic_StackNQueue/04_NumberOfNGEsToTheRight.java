@@ -4,7 +4,6 @@ class Solution {
   
 //  Naive Approach - 
 // TC-O(NQ) where Q is No. of Queries 
-  /*
   public static int[] count_NGEs(int N, int arr[], int queries, int indices[]) {
     // code here
     
@@ -28,7 +27,7 @@ class Solution {
     
     return result;
   }
-  */
+  
   
   
 //   Optimised Approach - TC-O(NlogN) for Merge Sort
@@ -37,6 +36,7 @@ class Solution {
 // Now compare the values -> If any element say A of 1st part is smaller then any element say B of 2nd Part
 // Then that element A from 1st Part will be smaller to every element from B till the last in the 2nd Part
 // In Other words - all those elements from “b” till last will be the next greater element for “a“
+/*
 public static int[] count_NGEs(int N, int arr[], int queries, int indices[]) {
      // code here
 
@@ -129,4 +129,5 @@ public static void merge(List<Pair<Integer, Integer>> ListOfPair, int[] result, 
   }
  
 }
+*/
        
