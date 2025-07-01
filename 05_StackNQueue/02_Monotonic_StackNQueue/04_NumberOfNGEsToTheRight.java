@@ -12,10 +12,11 @@ class Solution {
     // Iterate over every indices element
     for(int i=0; i<indices.length; i++){
         
-        // Extract each element of indices
+        // Extract each index of indices
         int index = indices[i];
         int count = 0;
-        
+
+        // Iterate from next position of the indexth as we have to find the one which are greater then that on the right
         for(int j=index+1; j<arr.length; j++){
             int value = arr[index];
             if(value<arr[j])
