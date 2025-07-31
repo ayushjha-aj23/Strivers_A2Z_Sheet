@@ -28,6 +28,6 @@ class Solution {
 // Approach-2: Optimised Approach -> Subarray Maximums-Subarray Minimums
 class Solution {
     public long subArrayRanges(int[] nums) {
-        // 
+        
     }
 }
