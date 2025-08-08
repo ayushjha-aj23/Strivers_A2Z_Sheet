@@ -1,3 +1,5 @@
+// GFG - Next Greater Element (NGE) 
+
 class Solution {
 
     // NEXT GREATER ELEMENT
