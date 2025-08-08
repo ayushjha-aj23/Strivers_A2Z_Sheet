@@ -1,3 +1,5 @@
+// GFG - Smaller on Left (Previous Smaller Element PSE)
+
 class Solution {
 
   public int[] prevSmaller(int[] A) {
