@@ -1,3 +1,5 @@
+// LC - 496. Next Greater Element-I
+
 class Solution {
 
     //Step 1: Use Hashmap and find the NGE for all the value of num2---Num2, NGE
