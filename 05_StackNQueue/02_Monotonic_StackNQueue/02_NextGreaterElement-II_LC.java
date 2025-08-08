@@ -2,7 +2,7 @@ class Solution {
 
     // Same as Next Greater Element but in this we have to check in Circular Array
     // E.g. nums = [1, 2, 3, 4, 3]
-    // Output = [2, 3, 4, -1, 4]
+    //    Output = [2, 3, 4, -1, 4]
 
     // Naive Approach - Nested Loops - TC-O(N2) and SC-O(N)
     // For Searching the NGE in Circular form we can use - (i%n)
