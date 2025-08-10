@@ -1,4 +1,4 @@
-// GFG and LC
+// GFG and LC - Trapping Rain Water Problem 
 
 class Solution {
 
