@@ -25,7 +25,7 @@ class Solution {
                 if(arr[j]<=element){
                     span++;
                 }
-                else{ // If greater than previous element then break out
+                else{ // If previous element is greater then break out
                     break;
                 }
             }
