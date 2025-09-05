@@ -39,8 +39,8 @@ class Solution {
     public ArrayList<Integer> calculateSpan(int[] arr) {
         // code here
         
-        // AbstractMap.SimpleEntr
-        Stack<SimpleEntry<Integer, Integer>> st = new Stack<>();
+        // AbstractMap.SimpleEntry
+        Stack<SimpleEntry<Integer, Integer>> st = new Stack<>(); // Store (Vaue, Index)
         ArrayList<Integer> result = new ArrayList<>(); 
         int n = arr.length;
         
