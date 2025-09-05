@@ -13,7 +13,6 @@ class Solution {
         
         
         ArrayList<Integer> resultList = new ArrayList<>();
-        //Stack<Integer> st = new Stack<>();
         int n = arr.length;
         
         // i moving forward 
