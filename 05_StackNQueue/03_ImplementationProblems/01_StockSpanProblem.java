@@ -71,7 +71,7 @@ class Solution {
 
 // LC
 // Maximum number of consecutive days(starting from today and going backward) for which the stock price was less than or equal to the price of current day. (Include Current Day)
-// [7,2,1,2] -> Today is 2 -> 4 [1,2,2(today)]
+// [7,2,1,2] -> Today is 2 -> 4 [2,1,2,2(today)]
 // [7,9,1,2] -> Today is 8 -> 3 [1,2,8(today)] 
 
 
