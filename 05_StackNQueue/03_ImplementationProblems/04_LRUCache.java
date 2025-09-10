@@ -16,6 +16,8 @@ class Node{
     }
 }
 
+
+// TC-O(1) and SC-O(capacity)
 class LRUCache {
 
     // Declared Globally
