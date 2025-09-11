@@ -70,9 +70,9 @@ class DoublyLinkedList{
 
 class LFUCache {
 
-    HashMap<Integer, DoublyLinkedList> freqMap = new HashMap<>(); // Freq, DLL List
+    HashMap<Integer, DoublyLinkedList> freqMap; // Freq, DLL List
     // Group Nodes as a single list having same frequency
-    HashMap<Integer, Node> keyNodeMap = new HashMap<>(); // Key, Node
+    HashMap<Integer, Node> keyNodeMap; // Key, Node
     int capacity,minFreq;
 
     public LFUCache(int capacity) {
