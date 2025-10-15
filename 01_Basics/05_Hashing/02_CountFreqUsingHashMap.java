@@ -14,7 +14,6 @@ class Solution {
             hashmap.put(arr[i], hashmap.getOrDefault(arr[i], 0)+1);
         }
         
-        
         // Step 2: Create the result array
         int[] resultArray = new int[n];
         
