@@ -61,6 +61,8 @@ class Solution {
         
         int[] nse = findNSE(arr); //Array- to store list of next smaller elements
         int[] pse = findPSEE(arr); // Array - to store list of previous smaller or equal element
+        // Why PSEE (Previous Smaller or Equal Element) -> Because of edge case - [1, 1] 
+        // So the condition will be --- > while(!st.isEmpty() && arr[st.peek()] > arr[i])  // Here will not remove equal so only > and not >=
 
         for(int i=0; i<n; i++){
             int left = i-pse[i];
