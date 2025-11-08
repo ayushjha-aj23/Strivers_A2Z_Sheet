@@ -47,28 +47,41 @@ class Solution {
 
 // For each element A[i], 
 // we compute how far it can extend to the left and right while still being the minimum.
-// left[i] - the number of consecutive elements to the left that are strictly greater than arr[i].
+// left[i] - the number of consecutive elements to the left that are strictly greater than arr[i]. - NSE
 // right[i]- the number of consecutive elements to the right that are greater than or equal to arr[i].
 // Previous Smaller Element and Next Smaller Element
 // f(i) = left[i] × right[i]
 // => The Contribution of arr[i] to the answer is arr[i]×left[i]×right[i]
 
+// Each element can extend left and right until you find a smaller element that blocks it.
+// To the left: how many elements can I include before hitting a smaller element?
+// → left[i] = i - pse[i]
+// where pse[i] = index of previous smaller or equal element.
+// To the right: how many elements can I include after me before hitting a smaller element?
+// → right[i] = nse[i] - i
+// where nse[i] = index of next smaller element.
+// f(i)=left[i]×right[i]
+// A[i]*f(i)
+
 class Solution {
     public int sumSubarrayMins(int[] arr) {
         int totalSum = 0;
         int n = arr.length;
-        int mod = (int) (1e9+7);
-        
+        int mod = (int) 1e9+7;
+
+        // Find for each element:
+        // - nse[i]: index of Next Smaller Element (to the right)
+        // - pse[i]: index of Previous Smaller OR Equal Element (to the left)
         int[] nse = findNSE(arr); //Array- to store list of next smaller elements
         int[] pse = findPSEE(arr); // Array - to store list of previous smaller or equal element
         // Why PSEE (Previous Smaller or Equal Element) -> Because of edge case - [1, 1] 
         // So the condition will be --- > while(!st.isEmpty() && arr[st.peek()] > arr[i])  // Here will not remove equal so only > and not >=
 
         for(int i=0; i<n; i++){
-            int left = i-pse[i];
-            int right = nse[i]-i;
+            int left = i-pse[i]; // distance to previous smaller (or equal)
+            int right = nse[i]-i; // distance to next smaller
 
-            totalSum = (int)((totalSum + (long)right * left * arr[i]) % mod);
+            totalSum = (int) ((totalSum + (long)right * left * arr[i]) % mod);
             // int - as final result is integer
             // long - as it might be a bigger value
         }
@@ -90,7 +103,7 @@ class Solution {
                 st.pop();
             }
 
-           nse[i] = st.isEmpty() ? n : st.peek(); // If empty take n
+           nse[i] = st.isEmpty() ? n : st.peek(); // If empty take n i.e. if no next smaller then take n (acts as boundary)
             st.push(i);
         }
         return nse;
@@ -104,12 +117,14 @@ class Solution {
 
         for(int i=0; i<n; i++){
 
+            // Pop only strictly greater (keep equal for correct duplicate handling)
+            // If both sides popped >=, equal elements would get double-counted or skipped incorrectly.
             while(!st.isEmpty() && arr[st.peek()] > arr[i]){ //Here will not remove equal so only >
                 // System.out.println("Pop: top index " + st.peek() + ", arr[top] = " + arr[st.peek()] + ", arr[i]=" + arr[i]);
                 st.pop();
             }
 
-            psee[i] = st.isEmpty() ? -1 : st.peek(); // If empty take -1
+            psee[i] = st.isEmpty() ? -1 : st.peek(); // If empty take -1 (acts as boundary)
             // System.out.println("pse[" + i + "] = " + psee[i]);
             st.push(i);
         }
