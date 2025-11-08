@@ -14,10 +14,12 @@ public class Main {
 		int[] result = new int[n];
 		Stack<Integer> st = new Stack<>();
 		
-		// [1,3] -> Stack mae 3 hai then 1 nahi jayega 
-		// [5,3] -> Stack mae 3 hai then 5 jayega kyu ki 3 se bada hai
+		// Traverse from right to left
+		// Example explanation:
+		// [1, 3] -> Stack has 3, since 3 > 1, next greater of 1 is 3.
+		// [5, 3] -> Stack has 3, since 5 > 3, pop 3 and push 5.
 		for(int i=n-1; i>=0; i--) {
-			while(!st.isEmpty() && st.peek()<=nums[i]) {
+			while(!st.isEmpty() && st.peek()<=nums[i]) { // Remove elements smaller peek
 				st.pop();
 			}
 			
@@ -35,10 +37,11 @@ public class Main {
 		int[] result = new int[n];
 		Stack<Integer> st = new Stack<>();
 		
-		// [1,3] -> Stack mae 3 hai then 1 jayega kyu ki 3 se chota hai
-		// [5,3] -> Stack mae 3 hai then 5 nahi jayega
+		// Traverse from right to left
+		// [1,3] -> Stack has 3, since 3 > 1, pop 3 and push 1.
+		// [5,3] -> Stack has 3, since 3 < 5, next smaller for 5 is 3.
 		for(int i=n-1; i>=0; i--) {
-			while(!st.isEmpty() && st.peek()>=nums[i]) {
+			while(!st.isEmpty() && st.peek()>=nums[i]) { // Remove elements greater peek
 				st.pop();
 			}
 			
@@ -55,8 +58,9 @@ public class Main {
 		int[] result = new int[n];
 		Stack<Integer> st = new Stack<>();
 		
-		// [1,3] -> Stack mae 1 hai then 
-		// 
+		// Traverse from left to right
+		// [1,3] -> Stack has 1, since 3 > 1, pop 1 and push 3.
+		// [5,3] -> Stack has 5, since 3 < 5, previous greater of 3 is 5.
 		for(int i=0; i<n; i++) {
 			while(!st.isEmpty() && st.peek()<=nums[i]) {
 				st.pop();
@@ -74,7 +78,10 @@ public class Main {
 		
 		int[] result = new int[n];
 		Stack<Integer> st = new Stack<>();
-		
+
+		// Traverse from left to right
+		// [1,3] -> Stack has 1, since 3 > 1, previous smaller of 3 is 1.
+		// [5,3] -> Stack has 5, since 5 > 3, pop 5 and push 3.
 		for(int i=0; i<n; i++) {
 			while(!st.isEmpty() && st.peek()>=nums[i]) {
 				st.pop();
