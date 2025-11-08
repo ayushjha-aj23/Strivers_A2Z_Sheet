@@ -12,11 +12,10 @@ class Solution {
             int largest = nums[i];
             int smallest = nums[i];
 
-            for(int j=i+1; j<n; j++){ // Starting from i+1 and not i because i=0;j=0 -> arr[0] 
+            for(int j=i; j<n; j++){ // We can take j=i+1 as single element subarray is giving 0 and of no use. Starting from i+1 and not i because i=0;j=0 -> arr[0] 
             // largest and smallest both are 1 if [1,2,3] and then its result is 0
                 largest = Math.max(largest, nums[j]);
                 smallest = Math.min(smallest, nums[j]);
-
                 range = range + (largest-smallest);
             }
         }
