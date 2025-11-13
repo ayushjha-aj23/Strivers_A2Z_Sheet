@@ -1,5 +1,7 @@
 
 // LC-540
+// GFG-Single Among Doubles in a Sorted
+
 
 class Solution {
 
