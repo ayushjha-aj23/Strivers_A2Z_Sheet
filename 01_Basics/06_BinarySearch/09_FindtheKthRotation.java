@@ -1,5 +1,7 @@
 
 // GFG
+// Find out how many times has an array been rotated
+
 
 class Solution {
     
