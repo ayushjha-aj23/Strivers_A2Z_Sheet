@@ -58,6 +58,7 @@ class Solution {
         while(low<=high){
             int mid = low +(high-low)/2;
 
+            // Checking mid with its adjacents
             if(nums[mid-1]!=nums[mid]&&nums[mid+1]!=nums[mid])
                 return nums[mid];
             
