@@ -4,6 +4,7 @@
 class Solution {
 
     // Naive - Linear Search
+    // TC - O(max-min)+O(N)
     // min flower bloomed - min days - min of bloomDays[i]
     // all flower bloomed - max days - miax of bloomDays[i]
     // Range - min value of i and max vale of i
@@ -69,6 +70,7 @@ class Solution {
 
     
     // Optimised Approach - Using Binary Search
+    // TC - O(log (max-min))+O(N)
     public int minDays(int[] bloomDay, int m, int k) {
         // Remember two conditions - If flowers are less or if they are not adjacent
 
