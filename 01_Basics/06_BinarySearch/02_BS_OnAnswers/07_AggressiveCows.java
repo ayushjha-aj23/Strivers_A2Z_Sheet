@@ -62,7 +62,7 @@ class Solution {
     
     
     // Optimised Approach - Using Binary Search
-    
+    // max(min distance)
     // low = 1
     // high = max-min
     public int aggressiveCows(int[] stalls, int cows) {
