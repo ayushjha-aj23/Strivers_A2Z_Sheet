@@ -1,6 +1,48 @@
 
 // LC - 1011
 
+
+// generic partitioning problem.
+// You have:
+// An array arr[]
+// You want to divide it into at most K parts such that maximum sum of any part ≤ some limit (pages) and you want to check feasibility for a given limit.
+// This exact check is used in:
+//     Allocate Minimum Number of Pages
+//     Split Array Largest Sum
+//     Capacity to Ship Packages Within D Days
+//     Painter’s Partition Problem
+
+// Generic Partitioning Problem - Template
+// Can we split arr[] into at most maxParts subarrays such that each subarray has sum <= limit ?
+/*
+public boolean canPartition(int[] arr, int maxParts, int limit) {
+    int usedParts = 1;   // we start with first partition
+    int currentSum = 0;
+
+    for (int num : arr) {
+        // impossible if a single element itself exceeds limit
+        if (num > limit) return false;
+
+        if (currentSum + num <= limit) {
+            currentSum += num; // add to current partition
+        } else {
+            usedParts++; // need a new partition
+            currentSum = num; // update currentSum as the new number
+
+            // as soon as usedParts exceeds the maxParts then we must return false
+            if (usedParts > maxParts) { 
+                return false;
+            }
+        }
+    }
+
+    return true;
+}
+*/
+
+
+
+
 class Solution {
 
     // min weight capacity = max(weights)
