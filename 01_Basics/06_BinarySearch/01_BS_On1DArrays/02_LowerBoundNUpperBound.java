@@ -8,8 +8,7 @@ class Solution {
     // LowerBound-> smallest index in the sorted array where element is >= to the given number.
     // Or Smallest Index such that arr[index]>=target 
     
-    // Move from the extreme right towards left untill you find the smallest index which is
-    // >= target index
+    // Move from the extreme right towards left untill you find the smallest index which is >= target index
     
     int lowerBound(int[] arr, int target) {
         // code here
@@ -38,8 +37,7 @@ class Solution {
     // UpperBound-> smallest index in the sorted array where element is > to the given number.
     // Or Smallest Index such that arr[index]>target 
     
-    // Move from the extreme right towards left untill you find the smallest index which is
-    // >= target index
+    // Move from the extreme right towards left untill you find the smallest index which is > target index
     int upperBound(int[] arr, int target) {
         // code here
         
