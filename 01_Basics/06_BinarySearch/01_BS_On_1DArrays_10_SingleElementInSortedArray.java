@@ -22,7 +22,7 @@ class Solution {
                 if(nums[i]!=nums[i-1])
                     return nums[i];
             }else{ // To check for all the middle elements
-                if(nums[i-1]==nums[i]||nums[i+1]==nums[i])
+                if(nums[i]==nums[i-1]||nums[i]==nums[i+1])
                     continue;
                 else
                     return nums[i];
