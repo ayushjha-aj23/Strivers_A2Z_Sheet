@@ -61,7 +61,10 @@ class Solution {
             // Checking mid with its adjacents
             if(nums[mid-1]!=nums[mid]&&nums[mid+1]!=nums[mid])
                 return nums[mid];
-            
+
+            // 1,1,2,2,3,3,4,4 -> even, odd
+            // even, odd -> single element is on right half
+            // odd, even -> single element is on left half
             // if mid is odd
             // odd (mid % 2 == 1) then -> nums[mid] == nums[mid-1]
             if(mid%2!=0){
@@ -77,7 +80,6 @@ class Solution {
             }
         }
         return -1;
-
     }
 
     // Approach - 3 Using Bit Manipulation
