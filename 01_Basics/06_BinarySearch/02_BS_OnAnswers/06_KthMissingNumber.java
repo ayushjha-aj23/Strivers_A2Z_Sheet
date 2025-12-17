@@ -3,6 +3,10 @@
 class Solution {
 
     // Linear Search - O(n+k)
+
+    // Imp to undestand the missingCount concept
+    // missingCount = arr[i] - (i+1) -> It is the missingCount of that index i
+    
     /*
     public int findKthPositive(int[] arr, int k) {
 
@@ -64,8 +68,8 @@ class Solution {
                 high = mid-1;
         }
 
-        // high-> currently pointing to number less then missing number -> currently missing count < k
-        // low-> currently pointing tonumber greater then missing number -> currently missing count > k
+        // high-> currently pointing to number lesser then missing number -> currently missing count < k
+        // low-> currently pointing to number greater then missing number -> currently missing count > k
         
 
         // return ---> arr[high]+more
