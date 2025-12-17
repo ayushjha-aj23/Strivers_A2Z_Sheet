@@ -3,7 +3,11 @@
 // GFG 
 
 class Solution {
-    
+
+    // Aggressive Cows -> (Min distance between cows) is Max
+    // Step 1- Sort the Array
+    // Minimum distance is 1 (between adjacent) and Maximum distance between cows (if 2 cows) then -> max-min (at extremes)
+    // Range - [1.......(max-min)] 
     
     // Naive Approach - Linear Scan 
     // TC -O(max-min)*O(n)
@@ -35,7 +39,7 @@ class Solution {
     }
     
     
-    private boolean canPlace(int[] stalls, int dis, int cows){
+    private boolean canPlace(int[] stalls, int minDisToMaintain, int cows){
         
         // 1st cow always at 1st stall
         int countCows = 1;
@@ -45,7 +49,7 @@ class Solution {
         int n = stalls.length;
         for(int i=1; i<n; i++){
             
-            if(stalls[i]-lastPlacedPos>=dis){ // distance should be greater then or equal to min distance dis between 2 cows
+            if(stalls[i]-lastPlacedPos>=minDisToMaintain){ // distance should be greater then or equal to min distance to be mainted between 2 cows
                 countCows++; // increase count
                 lastPlacedPos = stalls[i]; // update last position
             }
