@@ -7,9 +7,9 @@
 // An array arr[]
 // You want to divide it into at most K parts such that maximum sum of any part ≤ some limit (pages) and you want to check feasibility for a given limit.
 // This exact check is used in:
+//     Capacity to Ship Packages Within D Days
 //     Allocate Minimum Number of Pages
 //     Split Array Largest Sum
-//     Capacity to Ship Packages Within D Days
 //     Painter’s Partition Problem
 
 // Generic Partitioning Problem - Template
@@ -45,9 +45,9 @@ public boolean canPartition(int[] arr, int maxParts, int limit) {
 
 class Solution {
 
-    // min weight capacity = max(weights)
-    // max weigth capacity = sum of all weights -> only 1 day
-    // Range - [1, sum(weights)]
+    // min weight capacity = max(weights) from the whole array otherwise I can't ship that weight
+    // max weigth capacity = sum of all weights -> In that case i will only need 1 day
+    // Range - [max(weights), sum(weights)]
 
     // Optimised - BS on Anwers
     public int shipWithinDays(int[] weights, int days) {
@@ -58,9 +58,7 @@ class Solution {
         while(low<=high){
             int mid = low + (high-low)/2;
 
-            
             int d = calDays(weights, mid);
-
             if(d<=days){
                 result = mid;
                 high = mid-1;
@@ -98,8 +96,8 @@ class Solution {
             if(sum+weights[i]<=mid)
                 sum += weights[i]; // add weight till it is less then or equal to mid
             else{
+                days++; // Increase the days count - As we need a new partition
                 sum = weights[i]; // Update sum with the new weight and forget all the previous
-                days++; // Update days
             }    
         }
         return days;
