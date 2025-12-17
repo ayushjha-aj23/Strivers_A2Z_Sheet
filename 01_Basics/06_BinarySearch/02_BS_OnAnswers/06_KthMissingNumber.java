@@ -8,15 +8,13 @@ class Solution {
 
         int n = arr.length;
         int missingCount = 0;
-        int num = 1;
+        int num = 1; // For all natural numbers
         int i=0;
         while(missingCount<k){
-
             if( i<n && arr[i]==num){
                 i++;
-            }else{
+            }else{ // It means an element is missing as at index(i) value should have been i+1 but it is greater 
                 missingCount++;
-
                 if(missingCount==k) return num;
             }
 
@@ -31,7 +29,7 @@ class Solution {
     // Optimised Search - O(log n)
 
     // Here we cannot apply usual binary search -> becuase numbers are missing
-    // Here we cannot apply usual BS on Answers -> becuase we don't have to seperation of (possible's and !possible's)
+    // Here we cannot apply usual BS on Answers -> becuase we don't have seperation of (possible's and !possible's)
 
     // 1-Find out the 2 nearby indexes between which our missing number will be
     /*
