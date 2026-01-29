@@ -1,5 +1,9 @@
+// Scanner is inside util
+import java.util.*;
+
 class Solution {
-    public void printNumber(Scanner sc) {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         int x = sc.nextInt();
         System.out.println(x);
 
