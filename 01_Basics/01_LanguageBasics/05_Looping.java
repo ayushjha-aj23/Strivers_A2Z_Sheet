@@ -1,4 +1,4 @@
-//Back-end complete function Template for Java
+//Function Template for Java
 import java.util.Scanner;
 
 public class Main {
