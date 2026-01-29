@@ -1,5 +1,5 @@
 //Back-end complete function Template for Java
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String args[]) {
