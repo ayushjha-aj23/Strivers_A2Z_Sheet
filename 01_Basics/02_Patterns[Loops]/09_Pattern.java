@@ -14,6 +14,8 @@ aaa***bbb
 aaaa*bbbb
 */
 
+// Combine Pattern 7 and then 8
+
 public class Main
 {
 	public static void main(String[] args) {
