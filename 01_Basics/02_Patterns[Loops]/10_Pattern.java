@@ -13,7 +13,11 @@ Pattern - 10: Half Diamond Star Pattern
 *
 */
 
-
+// Outer Loop -> 2*n-1 times
+// Inner Loop -> star times
+// How to find out star for every row -
+	// If i is less then or equal to n -> i times (Increase Stars)
+	// If i is more than n -> 2*n-i times (Decrease Stars)
 
 public class Main
 {
