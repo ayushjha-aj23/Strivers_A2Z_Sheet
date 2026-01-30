@@ -7,11 +7,13 @@ Pattern - 13: Increasing Number Triangle Pattern
 2 3
 4 5 6
 7 8 9 10
-11121314 15
+11 12 13 14 15
 */
 
-// i for line and j for columns which will be i times everytime (Line Number times)
-// Take counter and increasing everytime
+// Take value for n i.e. number of rows
+// And take a counter initially as 1
+// For i -> Iterate the outer loop n times (1->n)
+// For j -> Inside it run inner loop i times and print the counter and increase it by 1 every time
 
 public class Main
 {
