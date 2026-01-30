@@ -13,7 +13,7 @@ public class Main
   // Number, Space, Number
   public static void main(String[] args) {
 		
-		int n = 5;
+		int n = 4;
 		// Outer Loop 
 		for(int i=1; i<=n; i++){
 		    
