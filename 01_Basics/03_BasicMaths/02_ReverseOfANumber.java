@@ -21,6 +21,8 @@ class Solution {
 
 // LC-7 -> Reverse Integer
 class Solution {
+
+    // TC - O(n) and SC - O(1)
     public int reverse(int x) {
 
         int a = x; // Make a copy of x
