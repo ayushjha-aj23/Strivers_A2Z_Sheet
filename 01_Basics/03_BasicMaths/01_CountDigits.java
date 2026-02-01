@@ -10,6 +10,10 @@ class Solution {
             temp = temp/10;
         }
         return totalDigits;
+
+        // Or 
+        // int totalDigits = (int) Math.log10(n) + 1;
+        // System.out.println(totalDigits);
     }
 }
 
